@@ -5,7 +5,7 @@ function App() {
   const [password, setPassword] = useState("");
   const [title, setTitle] = useState("");
   const [passwordList, setPasswordList] = useState([]);
-
+@Crossorigin
   useEffect(() => {
     Axios.get("https://password-manage-nodejs.herokuapp.com/showpasswords").then((response) => {
       setPasswordList(response.data);
